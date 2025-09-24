@@ -360,6 +360,29 @@ font-size: 0.8rem;
 }
 
 }
+.navUnderLine {
+    position: relative;
+}
+
+.navUnderLine::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    left: 0;
+    top: 100%;
+    background-color: rgb(79, 202, 227);
+    position: absolute;
+    transition: width .2s;
+}
+
+.nav-item:hover .navUnderLine::after{
+   width: 100%;
+}
+
+#navA{
+    padding-bottom: 2px;
+}
+
 
 
 
@@ -381,24 +404,35 @@ font-size: 0.8rem;
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto" id="navContent">
+
           <li class="nav-item">
-            <a class="nav-link" href="#philosophy">철학</a>
+            <span class="navUnderLine">
+                <a id="navA" class="nav-link text-white" href="#philosophy">철학</a>
+            </span>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#services">사업영역</a>
+            <span class="navUnderLine">
+                <a id="navA" class="nav-link text-white" href="#services">사업영역</a>
+            </span>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#vision">비전</a>
+            <span class="navUnderLine">
+                <a id="navA" class="nav-link text-white" href="#vision">비전</a>
+            </span>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#contact">협력문의</a>
+            <span class="navUnderLine">
+                <a id="navA" class="nav-link text-white" href="#contact">협력문의</a>
+            </span>
           </li>
           <span style="width: 10px;"></span>
         </ul>
       </div>
     </div>
     </nav>
-
 
 
 
